@@ -1,0 +1,266 @@
+{
+  "data": {
+    "rows": 9134,
+    "clv_mean": 8005.0,
+    "clv_median": 5780.0,
+    "clv_skew": 3.03,
+    "tier_share": {
+      "3+": 0.3929,
+      "1": 0.3559,
+      "2": 0.2511
+    },
+    "tier_mean_clv": {
+      "1": 3607.0,
+      "2": 15723.0,
+      "3+": 7055.0
+    },
+    "clv_per_premium_dollar": {
+      "1": {
+        "5%": 34.0,
+        "50%": 39.2,
+        "95%": 40.5,
+        "std": 2.2
+      },
+      "2": {
+        "5%": 103.9,
+        "50%": 120.3,
+        "95%": 338.6,
+        "std": 79.0
+      },
+      "3+": {
+        "5%": 67.8,
+        "50%": 78.5,
+        "95%": 80.9,
+        "std": 4.5
+      }
+    },
+    "zero_income_share": 0.2537,
+    "two_policy_multiplier_cv_r2": 0.0969
+  },
+  "split": {
+    "train": 7307,
+    "test": 1827
+  },
+  "selected_model": "Random Forest",
+  "lowest_cv_mae_model": "LightGBM",
+  "selected_params": {
+    "max_depth": 20,
+    "max_features": 0.4214,
+    "min_samples_leaf": 1,
+    "n_estimators": 249
+  },
+  "formula_multipliers": {
+    "1": 39.14,
+    "2": 120.36,
+    "3+": 78.47
+  },
+  "test_selected": {
+    "r2_dollar": 0.7059,
+    "r2_log": 0.9089,
+    "mae": 1342.9607,
+    "rmse": 3639.1199,
+    "median_ape": 0.0143,
+    "within_10pct": 0.7898
+  },
+  "test_formula": {
+    "r2_dollar": 0.5752,
+    "r2_log": 0.854,
+    "mae": 1428.5504,
+    "rmse": 4373.9731,
+    "median_ape": 0.0285,
+    "within_10pct": 0.7504
+  },
+  "error_by_tier_selected": {
+    "1": {
+      "customers": 650,
+      "mean_clv": 3604.924,
+      "mae": 54.4067,
+      "median_ape": 0.0094,
+      "within_10pct": 0.9938,
+      "share_of_customers": 0.3558,
+      "share_of_error": 0.0144
+    },
+    "2": {
+      "customers": 459,
+      "mean_clv": 15564.7274,
+      "mae": 5091.604,
+      "median_ape": 0.3284,
+      "within_10pct": 0.1808,
+      "share_of_customers": 0.2512,
+      "share_of_error": 0.9525
+    },
+    "3+": {
+      "customers": 718,
+      "mean_clv": 7051.9218,
+      "mae": 113.0621,
+      "median_ape": 0.0088,
+      "within_10pct": 0.9944,
+      "share_of_customers": 0.393,
+      "share_of_error": 0.0331
+    }
+  },
+  "error_by_tier_formula": {
+    "1": {
+      "customers": 650,
+      "mean_clv": 3604.924,
+      "mae": 164.4896,
+      "median_ape": 0.0255,
+      "within_10pct": 0.8462,
+      "share_of_customers": 0.3558,
+      "share_of_error": 0.041
+    },
+    "2": {
+      "customers": 459,
+      "mean_clv": 15564.7274,
+      "mae": 4975.9965,
+      "median_ape": 0.1309,
+      "within_10pct": 0.4641,
+      "share_of_customers": 0.2512,
+      "share_of_error": 0.8751
+    },
+    "3+": {
+      "customers": 718,
+      "mean_clv": 7051.9218,
+      "mae": 305.0987,
+      "median_ape": 0.0238,
+      "within_10pct": 0.8468,
+      "share_of_customers": 0.393,
+      "share_of_error": 0.0839
+    }
+  },
+  "intervals": {
+    "coverage_target": 0.8,
+    "log_bounds": {
+      "1": {
+        "0.09999999999999998": -0.0254,
+        "0.9": 0.024
+      },
+      "2": {
+        "0.09999999999999998": -0.4054,
+        "0.9": 0.642
+      },
+      "3+": {
+        "0.09999999999999998": -0.0248,
+        "0.9": 0.0225
+      }
+    },
+    "test": {
+      "1": {
+        "coverage": 0.8338,
+        "median_width": 156.4918,
+        "median_rel_width": 0.0494
+      },
+      "2": {
+        "coverage": 0.8039,
+        "median_width": 16057.1551,
+        "median_rel_width": 1.2335
+      },
+      "3+": {
+        "coverage": 0.8064,
+        "median_width": 298.8247,
+        "median_rel_width": 0.0472
+      },
+      "All": {
+        "coverage": 0.8155,
+        "median_width": 276.3749,
+        "median_rel_width": 0.0494
+      }
+    }
+  },
+  "permutation_importance_mae": {
+    "Number of Policies": 3739.6,
+    "Monthly Premium Auto": 1751.2,
+    "Income": 142.8,
+    "Total Claim Amount": 91.4,
+    "EmploymentStatus": 77.8,
+    "Coverage": 71.8,
+    "Months Since Last Claim": 66.1,
+    "Vehicle Class": 54.3,
+    "Response": 42.2,
+    "Months Since Policy Inception": 40.2
+  },
+  "cv_results": [
+    {
+      "model": "Baseline (mean CLV)",
+      "cv_mae_mean": 4453.785,
+      "cv_mae_std": 149.8103,
+      "cv_r2_dollar_mean": -0.0008,
+      "cv_r2_dollar_std": 0.0006,
+      "cv_r2_log_mean": -0.1363,
+      "cv_r2_log_std": 0.022,
+      "best_params": {}
+    },
+    {
+      "model": "Premium x tier formula",
+      "cv_mae_mean": 1479.7958,
+      "cv_mae_std": 160.1776,
+      "cv_r2_dollar_mean": 0.5688,
+      "cv_r2_dollar_std": 0.0392,
+      "cv_r2_log_mean": 0.8579,
+      "cv_r2_log_std": 0.0165,
+      "best_params": {}
+    },
+    {
+      "model": "Ridge Regression",
+      "cv_mae_mean": 1548.1474,
+      "cv_mae_std": 115.1709,
+      "cv_r2_dollar_mean": 0.6784,
+      "cv_r2_dollar_std": 0.0284,
+      "cv_r2_log_mean": 0.9021,
+      "cv_r2_log_std": 0.0086,
+      "best_params": {
+        "alpha": 21.3683
+      }
+    },
+    {
+      "model": "Random Forest",
+      "cv_mae_mean": 1389.0263,
+      "cv_mae_std": 103.8849,
+      "cv_r2_dollar_mean": 0.7104,
+      "cv_r2_dollar_std": 0.0227,
+      "cv_r2_log_mean": 0.9101,
+      "cv_r2_log_std": 0.0075,
+      "best_params": {
+        "max_depth": 20,
+        "max_features": 0.4214,
+        "min_samples_leaf": 1,
+        "n_estimators": 249
+      }
+    },
+    {
+      "model": "XGBoost",
+      "cv_mae_mean": 1385.0079,
+      "cv_mae_std": 94.1637,
+      "cv_r2_dollar_mean": 0.692,
+      "cv_r2_dollar_std": 0.0188,
+      "cv_r2_log_mean": 0.9047,
+      "cv_r2_log_std": 0.0076,
+      "best_params": {
+        "colsample_bytree": 0.8092,
+        "learning_rate": 0.0314,
+        "max_depth": 6,
+        "min_child_weight": 3,
+        "n_estimators": 684,
+        "subsample": 0.843
+      }
+    },
+    {
+      "model": "LightGBM",
+      "cv_mae_mean": 1382.8268,
+      "cv_mae_std": 109.4926,
+      "cv_r2_dollar_mean": 0.69,
+      "cv_r2_dollar_std": 0.0266,
+      "cv_r2_log_mean": 0.9032,
+      "cv_r2_log_std": 0.0086,
+      "best_params": {
+        "colsample_bytree": 0.5998,
+        "learning_rate": 0.0467,
+        "min_child_samples": 7,
+        "n_estimators": 684,
+        "num_leaves": 58,
+        "subsample": 0.8721,
+        "subsample_freq": 1
+      }
+    }
+  ]
+}
